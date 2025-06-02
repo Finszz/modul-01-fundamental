@@ -42,7 +42,7 @@ console.log(hasil);
 
 
 // Write a code to check whether the number is prime number or not
-let number: number = 10;
+let number: number = 1;
 let hasil1: string;
 
 if (number % 2 === 0){
@@ -72,3 +72,40 @@ const n = 5;
 let i = 1;
 console.log(`hasil dari ${i} hingga ${n} adalah ${sumToN(n)}`);
 
+let counter2: number = 4;
+let variable2: number = 0;
+
+for (let i = 1; i <= counter2; i++){
+
+    variable2 = i + variable2;
+    console.log(`hasil dari ${i} = ${variable2}`);
+
+}
+
+// Write a code to find factorial of a number.
+
+const batas1: number = 4;
+let hasil2: number = 1;
+
+
+for (let i = 1; i <= batas1; i++){
+
+    hasil2 = i * hasil2;
+    console.log(`hasil dari ${i}!  = ${hasil2}`);
+} 
+
+// Write a code to print the first N fibonacci numbers.
+
+let counter1: number = 15;
+
+let variable1: number = 0;
+let variable02: number = 1;
+let variable3: number = 0;
+
+for (let i = 1; i <= counter1; i++){
+    variable3 = variable1 + variable02;
+    variable1 = variable02;
+    variable02 = variable3;
+}
+
+console.log(`bilangan fibonacci ke ${counter1} adalah ${variable1}`);
