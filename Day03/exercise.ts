@@ -68,6 +68,7 @@ function sumToN(n: number): number {
 }
 
 // contohnya:
-const n = 1;
-console.log(`hasil dari 1 hingga ${n} adalah ${sumToN(n)}`);
+const n = 5;
+let i = 1;
+console.log(`hasil dari ${i} hingga ${n} adalah ${sumToN(n)}`);
 
