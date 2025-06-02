@@ -1,0 +1,39 @@
+<script>
+
+ /*let tanggal1 = prompt ("tanggal");
+ let tanggal2 = prompt ("tanggal");
+ let bulan1 = prompt ("bulan");
+ let bulan2 = prompt ("bulan");
+ let tahun1 = prompt ("tahun");
+ let tahun2 = prompt ("tahun");
+
+ const tanggal = parseInt(tanggal1) - parseInt (tanggal2);
+ const bulan = parseInt (bulan1 * 30) - parseInt (bulan2 * 30);
+ const tahun = parseInt (tahun1 * 365) - parseInt (tahun2 * 365);
+ const result = parseInt (tanggal) + parseInt (bulan) + parseInt (tahun);
+ 
+ 
+
+alert(result);*/
+
+
+</script>
+
+
+<script>
+ 
+let inputtanggal1 = prompt ("Masukkan tanggal yang pertama, eg = 2022-10-01");
+let inputtanggal2 = prompt ("Masukkan tanggal yang kedua, samain formatnya");
+
+ let tanggal1 = new Date (inputtanggal1);
+ let tanggal2 = new Date (inputtanggal2);
+
+ if (isNaN(tanggal1) && isNaN(tanggal2)){
+    alert("ngetiknya yang bener napa -_- ");
+ }else {
+    let perbandingan = Math.abs(tanggal2 - tanggal1);
+    const different = Math.floor (perbandingan / (1000 * 60 * 60 * 24));
+    alert (`beda hari antara tanggal ${tanggal1.toLocaleDateString()} dan ${tanggal2.toLocaleDateString()} adalah ${different} hari`);
+
+ }
+</script>
