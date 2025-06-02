@@ -21,7 +21,7 @@ while(count <= 10){
     // count+2; count = count+2 (ini post-fixed).
     // ++count; hasilnya lgsg disini kalo pre-fixed. 
 }
-// ada 2 biar ga infinite:
+// ada 2 cara biar ga infinite:
 
 let isBoolean: boolean = true;
 while(isBoolean) {
@@ -74,6 +74,7 @@ for (let i: number = 0; i < 10; i++){
 
 for (let i: number = 0; i < 6; i++){
     console.log(i);
+
 
 }
 
