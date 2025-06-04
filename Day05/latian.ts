@@ -5,27 +5,25 @@
 const angka: number[] = [12, 5, 23, 18, 4, 45, 32];
 let tampungan: string = "";
 
-function lowest(){
-     return Math.min(...angka);
+function lowest() {
+    return Math.min(...angka);
 }
 
-function highest(){
+function highest() {
     return Math.max(...angka);
 }
 
-function average(){
-let average: number = 0;
+function average() {
+    let average: number = 0;
 
-for (let i = 0; i < angka.length; i++){
-    average += angka[i];
-}
+    for (let i = 0; i < angka.length; i++) {
+        average += angka[i];
+    }
     average /= angka.length;
     return average
 }
 
-console.log (lowest());
-console.log (highest());
-console.log (average());
+console.log(lowest(), highest(), average());
 
 /* Write a function that takes an array of words and returns a string by concatenating the words in the array,
 separated by commas and - the last word - by an 'and'.
@@ -34,17 +32,18 @@ a. Example : arr = ["apple", "banana", "cherry", "date"] → “apple,banana,che
 const huruf: string[] = ["Apple", "Banana", "Cherry", "ngok", "Date"];
 let kosong: string = "";
 
-for (let i = 0; i < huruf.length; i++){
-    if (i === (huruf.length - 1)){
-        kosong += ` and ${huruf[i]}`;
-} else {
+function cbd() {
+    for (let i = 0; i < huruf.length; i++) {
+        if (i === (huruf.length - 1)) {
+            kosong += ` and ${huruf[i]}`;
+        } else {
 
-    kosong += `${huruf[i]}, `;
+            kosong += `${huruf[i]}, `;
 
-} 
+        }
+    } return kosong
 }
-
-console.log(kosong);
+console.log(cbd());
 
 /* Write a function from a given array of numbers and return the second smallest number
 a. Example : numbers = [5, 3, 1, 7, 2, 6] → 2 */
@@ -52,24 +51,30 @@ a. Example : numbers = [5, 3, 1, 7, 2, 6] → 2 */
 let number01: number[] = [5, 3, 1, 7, 2, 6];
 let variabel001: number = 0;
 
-number01 = number01.sort()
+function abcd() {
+    number01 = number01.sort()
 
-console.log(number01[1]);
+    variabel001 = number01[1]
+
+    return variabel001
+}
+console.log(abcd());
 
 /* Write a function to calculate each element in the same position from two arrays of integer. Assume both arrays are
 of the same length.
 a. Example : [1, 2, 3] + [3, 2, 1] → [4, 4, 4] */
 
-let number001: number [] = [1, 2, 3];
-let number002: number [] = [3, 2, 1];
-let number003: number [] = [];
+let number001: number[] = [1, 2, 3];
+let number002: number[] = [3, 2, 1];
+let number003: number[] = [];
 
-for (let i = 0; i < number001.length; i++){
-    number003[i] = number001[i] + number002[i];
-    
+function abc() {
+    for (let i = 0; i < number001.length; i++) {
+        number003[i] = number001[i] + number002[i];
+
+    } return number003
 }
-
-console.log(number003);
+console.log(abc());
 
 /* Write a function that adds an element to the end of an array. However, the element should only be added if it is
 not already in the array.
@@ -78,14 +83,14 @@ b. Example : arr = [1, 2, 3, 4], newElement = 7 → [1, 2, 3, 4, 7] */
 
 const number0001: number[] = [1, 2, 3, 4];
 
-function ngok(nomer1: number){
-    for (let i = 0; i <= number0001.length; i++){
-    if (number0001.includes(nomer1)){
-    
-    } else {
-        number0001.push(nomer1);
-    }
-} return number0001
+function ngok(nomer1: number) {
+    for (let i = 0; i <= number0001.length; i++) {
+        if (number0001.includes(nomer1)) {
+
+        } else {
+            number0001.push(nomer1);
+        }
+    } return number0001
 }
 
 console.log(ngok(10));
