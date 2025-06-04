@@ -42,12 +42,16 @@ console.log(hasil);
 
 
 // Write a code to check whether the number is prime number or not
-let number: number = 1;
+let number: number = 49;
 let hasil1: string;
 
 if (number % 2 === 0){
     hasil1 = `${number} is not a prime number.`
 } else if (number % 3 === 0){
+    hasil1 = `${number} is not a prime number`
+} else if (number % 5 === 0){
+    hasil1 = `${number} is not a prime number`
+} else if (number % 7 === 0){
     hasil1 = `${number} is not a prime number`
 } else {
     hasil1 = `${number} is a prime number`
@@ -55,6 +59,15 @@ if (number % 2 === 0){
 
 console.log(hasil1);
 
+
+let angkka: number = 5;
+let pembagi: number = 0;
+let hasil00: string = "";
+
+for (let b = 1; b < angkka; b++){
+    if (angkka%b === 0)
+        pembagi++
+}
 
 // Write a code to find the sum of the numbers 1 to N.
 
@@ -72,13 +85,13 @@ const n = 5;
 let i = 1;
 console.log(`hasil dari ${i} hingga ${n} adalah ${sumToN(n)}`);
 
-let counter2: number = 4;
+let counter2: number = 5;
 let variable2: number = 0;
 
 for (let i = 1; i <= counter2; i++){
 
     variable2 = i + variable2;
-    console.log(`hasil dari ${i} = ${variable2}`);
+    console.log(`hasil dari ${i} adalah ${variable2}`);
 
 }
 

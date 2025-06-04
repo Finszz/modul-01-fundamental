@@ -1,0 +1,41 @@
+<script>
+const namaToko = `=== Menu Produk ===\n
+1. Lihat produk\n
+2. Tambah produk\n
+3. Perbarui produk\n
+4. Hapus produk\n
+5. Keluar\n
+   Masukkan nomer menu:`;
+
+   let lihatproduk = [
+    ,"choco"
+    ,"cheese"
+    ,"mie"
+    ,"latiao"];
+
+
+while(true){
+    const Toko = prompt (namaToko);
+    
+    
+    if (Toko == "1"){
+    const produk = alert(lihatproduk);
+
+} else if (Toko == "2"){
+    const a = prompt ("Masukkan nama produk yang mau ditambah");
+    lihatproduk.push (a);
+    alert(lihatproduk);
+    
+} else if (Toko == "3"){
+
+} else if (Toko == "4"){
+
+} else if (Toko == "5"){
+    alert("Berhasil keluar");
+    break;
+}
+}
+
+
+
+</script>

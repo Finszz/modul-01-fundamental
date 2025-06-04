@@ -1,0 +1,70 @@
+<script>
+
+    const database = ["kaos", "Jaket", "celana"];
+
+
+    function lihatData(){
+        // 1. Menyiapkan penampung output tampilan data.
+        let daftar = "=== Daftar Data ===\n";
+    for (let index = 0; index < database.length; index++){
+    
+        // 2. Mengakses data didalam array satu per satu.
+        const value = database [index];
+        // 3. Menambahkan tiap data kedalam variabel output.
+        daftar += `${index + 1}. ${value}\n`;
+    }
+        // 4. Menampilkan data output.
+        alert (daftar);
+    }
+
+    function tambahData(){
+        // 1. Menerima input data baru.
+        const nama = prompt ("Masukkan nama produk baru");
+        // 2. Menambahkan data kedalam database.
+        database.push(nama);
+        alert (`Penambahan data ${nama} berhasil`);
+    }
+
+    function perbaruiData(){
+        let yangDihapus = prompt (`Data yang mau dihapus
+        ${database}`);
+
+        let perbarui = prompt ("Masukkan data baru");
+        
+        database.splice(yangDihapus,1,perbarui);
+        alert (`Data ${yangDihapus} berhasil diganti menjadi ${perbarui}`)
+    }
+
+    function hapusData(){
+        let hilangData = prompt ("Masukkan data yang mau dihapus");
+        database.splice(hilangData, 1);
+    }
+
+    do{
+        const menu = prompt (`=== Menu manajemen Data ===
+    1. Lihat Data
+    2. Tambah Data
+    3. Perbarui Data
+    4. Hapus data
+    5. Keluar
+
+    Masukkan nomer menu yang dipilih`);
+
+    if (menu === "1"){
+        lihatData();
+
+    } else if (menu === "2"){
+        tambahData();
+
+    } else if(menu === "3"){
+        perbaruiData();
+    } else if (menu === "4"){
+        hapusData();
+    } else if (menu === "5"){
+        alert ("Berhasil keluar");
+        break;
+    }
+
+    }while(true);
+
+</script>

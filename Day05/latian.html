@@ -1,0 +1,97 @@
+<script>
+
+    const database = [
+        ["kaos", 35000, "stok = " + 12],
+        ["Celana", 70000, "stok = " + 6],
+        ["Jaket", 40000, "stok = " + 3],
+
+]
+
+    function lihatData(){
+        // 1. Menyiapkan penampung output tampilan data.
+        let daftar = "=== Daftar Data ===\n";
+    for (let index = 0; index < database.length; index++){
+    
+        // 2. Mengakses data didalam array satu per satu.
+        const value = database [index];
+        // 3. Menambahkan tiap data kedalam variabel output.
+        daftar += `${index + 1}. ${value}\n`;
+    }
+        // 4. Menampilkan data output.
+        return (daftar);
+    }
+
+    function tambahData(){
+        
+        // 1. Menerima input data baru.
+        const nama = prompt (`${lihatData()} Masukkan nama produk baru`);
+        const harga = prompt ("Mau harga berapa?");
+        const stok = prompt ("Stoknya berapa?");
+        // 2. Menambahkan data kedalam database.
+        const temp = [nama, harga, "stok = " + stok];
+        database.push(temp);
+        alert (`Penambahan data ${nama} dengan harga ${harga} dan stok = ${stok} berhasil`);
+    }
+
+    function perbaruiData(){
+        
+        let yangDihapus = prompt (`${lihatData()}\n Yang diedit:
+        1. Barang
+        2. Harga
+        3. Stok`);
+
+        if (yangDihapus === "1"){
+            const apa = prompt ("Barang apa yang mau dihapus (pake nomer)?");
+            const diganti = prompt ("Ganti apa?");
+            database[apa].splice(0, 1, diganti);
+
+        } else if (yangDihapus === "2"){
+            const gantiHarga = prompt ("Harganya apa yang mau diganti (pake nomer)?");
+            const yangGanti = prompt ("Harga berapa jadinya?");
+            database[gantiHarga].splice(1, 1, yangGanti);
+        } else if (yangDihapus === "3"){
+            const gantiStok = prompt ("Stok apa (Pake nomer)?");
+            const yangDiganti = prompt ("ganti berapa stoknya?");
+            database[gantiStok].splice (2, 1, "Stok = " + yangDiganti);
+        } else {
+            alert ("TULIS 1 atau 2 atau 3 YA!");
+        }
+
+        
+        
+        
+    }
+
+    function hapusData(){
+        let hilangData = prompt ("Masukkan nomer yang mau dihapus");
+        database.splice(hilangData - 1, 1);
+    }
+
+    do{
+        const menu = prompt (`=== Menu manajemen Data ===
+    1. Lihat Data
+    2. Tambah Data
+    3. Perbarui Data
+    4. Hapus data
+    5. Keluar
+
+    Masukkan nomer menu yang dipilih`);
+
+    if (menu === "1"){
+        alert (lihatData());
+
+    } else if (menu === "2"){
+        tambahData();
+
+    } else if(menu === "3"){
+        perbaruiData();
+    } else if (menu === "4"){
+        hapusData();
+    } else if (menu === "5"){
+        alert ("Berhasil keluar");
+        break;
+    }
+
+    }while(true);
+
+</script>
