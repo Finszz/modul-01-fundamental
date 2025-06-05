@@ -93,6 +93,6 @@ function ngok(nomer1: number) {
     } return number0001
 }
 
-console.log(ngok(10));
+console.log(ngok(8));
 
 
