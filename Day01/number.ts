@@ -6,11 +6,11 @@ let berat: number = 90.25; // NILAI FLOAT
 
 // Algorithm kode perhitungan penjumlahan 
 // 1. menyiapkan data yang harus dijumlahkan.
-let angka1: number = 20;
+let angka01: number = 20;
 let angka2: number = 25;
 
 // 2. memproses penjumlahan dari data yang diberikan.
-const result01: number = angka1 + angka2;
+const result01: number = angka01 + angka2;
 // 3. menampilkan hasil akhir penjumlahan di terminal.
 console.log(result01);
 
